@@ -1,0 +1,29 @@
+<ion-toolbar class="picture-modal">
+  <ion-buttons begin>
+    <button clear transparent (click)="closeModal()">
+      <ion-icon ios="ios-arrow-round-back" md="md-arrow-back"></ion-icon>
+    </button>
+    사진업로드
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-content style="background-color: black;">
+  <img id="originalPicture" [ngStyle]="{'width' : platform.width()+'px', 'height' : platform.width()+'px'}"/>
+
+  <button clear ion-item *ngIf="!hasImage" type="button" name="button" (click)="takePicture()">
+    <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
+    <div class="">
+      take a picture
+    </div>
+  </button>
+
+
+  <button clear ion-item *ngIf="hasImage" type="button" name="button" (click)="closeModal()">
+    <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
+    <div class="">
+      save
+    </div>
+  </button>
+
+</ion-content>
