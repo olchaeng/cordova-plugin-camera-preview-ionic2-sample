@@ -1,0 +1,1 @@
+# cordova-plugin-camera-preview-ionic2-sample
